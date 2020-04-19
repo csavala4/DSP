@@ -2,7 +2,7 @@ DOCS = thinkdsp.html thinkplot.html
 
 DOCPY = thinkdsp.py thinkplot.py
 
-DEST = /home/downey/public_html/greent/thinkdsp
+DEST = /Users/chrissavala/Desktop/DSP
 
 FIGS = \
 sounds1.pdf sounds1.eps  \
@@ -82,8 +82,8 @@ figs:
 .PHONY: docs $(DOCPY)
 
 docs: $(DOCPY)
-	rsync -a $(DOCS) /home/downey/public_html/greent
-	cd /home/downey/public_html/greent; sh back
+	rsync -a $(DOCS) /Users/chrissavala/Desktop/DSP
+	cd /Users/chrissavala/Desktop/DSP; sh back
 
 $(DOCPY):
 	pydoc -w ./$@
